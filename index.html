@@ -41,24 +41,29 @@
           </div>
           <div class="number-people-container">
             <label>Number Of People</label>
-            <input type="number" placeholder="Enter no of People" autofocus />
+            <input
+              disabled
+              type="number"
+              placeholder="Enter no of People"
+              autofocus
+            />
           </div>
-          <button class="generate-btn">Generate Bill</button>
+          <button disabled class="generate-btn">Generate Bill</button>
         </div>
         <div class="bill-output">
           <div class="bill-container">
             <h3>Tip amount</h3>
-            <p>₹50.00</p>
+            <p class="tip-amount"></p>
           </div>
           <div class="bill-container">
             <h3>Total</h3>
-            <p>₹1050.00</p>
+            <p class="bill-amount"></p>
           </div>
           <div class="bill-container">
             <h3>Each Person Bill</h3>
-            <p>₹210.00</p>
+            <p class="each-person"></p>
           </div>
-          <button class="reset-btn">Reset</button>
+          <button disabled class="reset-btn">Reset</button>
         </div>
       </div>
     </main>

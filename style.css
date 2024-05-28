@@ -86,9 +86,14 @@ label {
   border-radius: 5px;
   font-size: 20px;
   transition: box-shadow 0.1s;
+  background-color: green;
+  color: white;
 }
 .button-tip button:disabled {
   cursor: not-allowed;
+  caret-color: transparent;
+  background-color: rgb(239 239 239);
+  color: light-dark(rgba(84, 84, 84, 0.344), rgba(170, 170, 170, 0.344));
 }
 .button-tip .button-work:hover {
   box-shadow: rgb(74 128 0 / 23%) 0px 2px 8px 0px;
@@ -128,6 +133,7 @@ label {
   /* cursor: not-allowed; */
   color: white;
   margin-block: 15px;
+  cursor: pointer;
 }
 
 .bill-container {
@@ -157,4 +163,31 @@ label {
   /* cursor: not-allowed; */
   color: rgb(19, 19, 19);
   margin-block: 15px;
+  cursor: pointer;
+}
+
+input:disabled {
+  cursor: not-allowed;
+  caret-color: transparent;
+  background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
+  color: light-dark(rgba(84, 84, 84, 0.344), rgba(170, 170, 170, 0.344));
+  border-color: rgba(118, 118, 118, 0.3);
+}
+input:disabled::placeholder {
+  color: light-dark(rgba(84, 84, 84, 0.344), rgba(170, 170, 170, 0.344));
+}
+
+.generate-btn:disabled {
+  cursor: not-allowed;
+  caret-color: transparent;
+  background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
+  color: light-dark(rgba(84, 84, 84, 0.344), rgba(170, 170, 170, 0.344));
+  border-color: rgba(118, 118, 118, 0.3);
+}
+.reset-btn:disabled {
+  cursor: not-allowed;
+  caret-color: transparent;
+  background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
+  color: light-dark(rgba(84, 84, 84, 0.344), rgba(170, 170, 170, 0.344));
+  border-color: rgba(118, 118, 118, 0.3);
 }
