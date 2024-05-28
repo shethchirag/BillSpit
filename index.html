@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Split</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-conter">
+        <h1>Bill Split</h1>
+      </nav>
+    </header>
+    <main>
+      <div class="main-div">
+        <div class="bill-input">
+          <div class="input-container">
+            <label for="number">Bill</label>
+            <div class="input-field">
+              <span>₹</span>
+              <input
+                id="number"
+                type="number"
+                placeholder="Enter a Amount "
+                value=""
+              />
+            </div>
+          </div>
+          <div class="tip-container">
+            <label>Select Tip</label>
+            <div class="button-tip">
+              <button disabled>5%</button><button disabled>10%</button
+              ><button disabled>15%</button><button disabled>25%</button
+              ><button disabled>50%</button><button disabled>75%</button>
+            </div>
+            <div class="custom-input-tip">
+              <input disabled type="number" placeholder="Enter Custom amount" />
+            </div>
+          </div>
+          <div class="number-people-container">
+            <label>Number Of People</label>
+            <input type="number" placeholder="Enter no of People" autofocus />
+          </div>
+          <button class="generate-btn">Generate Bill</button>
+        </div>
+        <div class="bill-output">
+          <div class="bill-container">
+            <h3>Tip amount</h3>
+            <p>₹50.00</p>
+          </div>
+          <div class="bill-container">
+            <h3>Total</h3>
+            <p>₹1050.00</p>
+          </div>
+          <div class="bill-container">
+            <h3>Each Person Bill</h3>
+            <p>₹210.00</p>
+          </div>
+          <button class="reset-btn">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
