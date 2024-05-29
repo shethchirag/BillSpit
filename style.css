@@ -88,6 +88,7 @@ label {
   transition: box-shadow 0.1s;
   background-color: green;
   color: white;
+  cursor: pointer;
 }
 .button-tip button:disabled {
   cursor: not-allowed;
@@ -190,4 +191,10 @@ input:disabled::placeholder {
   background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
   color: light-dark(rgba(84, 84, 84, 0.344), rgba(170, 170, 170, 0.344));
   border-color: rgba(118, 118, 118, 0.3);
+}
+
+.button-tip .active {
+  /* outline: black; */
+  outline: 5px solid #00800052;
+  /* border: 0px solid black; */
 }

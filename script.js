@@ -15,15 +15,27 @@ let totalAmount;
 let finalAmount;
 let discountAmountBtn = 0;
 
+function activeButton(e) {
+  [...tipButtonContainer.children].forEach((tipBtn) => {
+    if (tipBtn === e.target) {
+      if (!tipBtn.classList.contains("active")) {
+        tipBtn.classList.add("active");
+      }
+    } else {
+      tipBtn.classList.remove("active");
+    }
+  });
+}
+
 [...tipButtonContainer.children].forEach((tipBtn) => {
-  tipBtn.addEventListener("click", () => {
+  tipBtn.addEventListener("click", (e) => {
     discountAmountBtn = parseFloat(tipBtn.innerText);
     customAmount.value = "";
+    activeButton(e);
   });
 });
 
 generateBtn.addEventListener("click", () => {
-  console.log(discountAmountBtn);
   const billAmount = parseFloat(billAmountUser.value);
   const discountAmountUser = parseFloat(customAmount.value);
   const numOfPeople = parseFloat(numberPeopleContainer.value);
@@ -38,12 +50,10 @@ generateBtn.addEventListener("click", () => {
     customAmount.value = "";
   }
 
-  console.log(discountAmount);
   totalAmount = billAmount + discountAmount;
-  console.log(totalAmount);
+
   finalAmount = (billAmount + discountAmount) / numOfPeople;
 
-  console.log(finalAmount);
   eachPersonDisplay.innerText = `₹ ${finalAmount}`;
   billAmountDisplay.innerText = `₹ ${totalAmount}`;
   tipAmountDisplay.innerText = `₹ ${discountAmount}`;
@@ -86,6 +96,13 @@ numberPeopleContainer.addEventListener("input", (e) => {
 customAmount.addEventListener("input", (e) => {
   if (e.target.value) {
     discountAmountBtn = 0;
+    [...tipButtonContainer.children].forEach((tipBtn) => {
+      tipBtn.classList.remove("active");
+    });
+    generateBtn.disabled = false;
+  }
+  if (!e.target.value) {
+    generateBtn.disabled = true;
   }
 });
 
